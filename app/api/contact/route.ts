@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         };
 
         const targetDeptEmail = emailMap[tabId] || "info@delonti.com";
-        const recipientEmail = process.env.RECIPIENT_EMAIL || process.env.EMAIL_TO || targetDeptEmail;
+        const recipientEmail = targetDeptEmail;
 
         // Build HTML table rows for custom fields
         let customRows = "";

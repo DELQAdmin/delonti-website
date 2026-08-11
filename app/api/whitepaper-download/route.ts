@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Whitepaper/Business Case title is required' }, { status: 400 });
         }
 
-        const recipientEmail = process.env.RECIPIENT_EMAIL || process.env.EMAIL_TO || "Delonti.Port@delonti.com";
+        const recipientEmail = "info@delonti.com";
         const fromEmail = process.env.EMAIL_FROM || process.env.EMAIL_USER || "Delonti.Port@delonti.com";
         const emailUser = process.env.EMAIL_USER || process.env.GMAIL_USER || "Delonti.Port@delonti.com";
         const emailPass = process.env.EMAIL_PASS || process.env.GMAIL_APP_PASSWORD || "";

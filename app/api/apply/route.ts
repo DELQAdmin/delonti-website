@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
             },
         });
 
-        const recipientEmail = process.env.RECIPIENT_EMAIL || process.env.EMAIL_TO || "Delonti.Port@delonti.com";
+        const recipientEmail = "info@delonti.com";
         const fromEmail = process.env.EMAIL_FROM || process.env.EMAIL_USER || "Delonti.Port@delonti.com";
 
         const htmlBody = `

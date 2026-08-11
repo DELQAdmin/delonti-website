@@ -20,7 +20,7 @@ export interface ContactInfo {
 }
 
 export async function sendContactEmail(contact: ContactInfo): Promise<string> {
-  const to = process.env.EMAIL_TO || process.env.RECIPIENT_EMAIL || "Delonti.Port@delonti.com";
+  const to = "info@delonti.com";
   const from = process.env.EMAIL_FROM || "Delonti Technology Solutions <Delonti.Port@delonti.com>";
 
   const subject = `New Inquiry from ${contact.name || "Website Visitor"} - ${
