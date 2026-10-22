@@ -192,6 +192,8 @@ export default function VideoGallery() {
                                     src={activeVideo.url}
                                     poster={activeVideo.thumbnail}
                                     controls
+                                    controlsList="nodownload"
+                                    onContextMenu={(e) => e.preventDefault()}
                                     autoPlay
                                     playsInline
                                     className="w-full h-full object-contain"
