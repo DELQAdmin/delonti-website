@@ -1,32 +1,113 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Play, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Video {
     id: string;
     title: string;
+    url: string;
     thumbnail: string;
 }
 
 const videos: Video[] = [
-    { id: "1153765212", title: "Utilities - 1", thumbnail: "https://i.vimeocdn.com/video/2105842220-2de14a5c364b840c17195e6fa9b452f5fc88181a6a3b1fe76ecb839571127d6f-d_640?region=us" },
-    { id: "1153764948", title: "Utilities - 2", thumbnail: "https://i.vimeocdn.com/video/2105841877-c12bab9c65a9e841998751e47bb020bcd55f19bb45c09c2934e929d1a5e792b2-d_640?region=us" },
-    { id: "1153764659", title: "Transportation", thumbnail: "https://i.vimeocdn.com/video/2105841557-bc2bed09b942179c15f9f129eaef02e504ae4acf40332226f624097b0099add6-d_640?region=us" },
-    { id: "1153764350", title: "Schools and Universities", thumbnail: "https://i.vimeocdn.com/video/2105841165-9f06a569b023176aa8d65df6dc541ae7f3ef67786de895e41548745b0e3a4afe-d_640?region=us" },
-    { id: "1153764043", title: "Resource Augmentation", thumbnail: "https://i.vimeocdn.com/video/2105840727-ebb14a9ea32d889d13ba0a31e803ca99c3acd96b35264852ad543257bc85600a-d_640?region=us" },
-    { id: "1153763709", title: "Port", thumbnail: "https://i.vimeocdn.com/video/2105840279-11bc80efe1def8c2724568b86ff50bcbf6257d81eab9fd5d785ec2449361b1b9-d_640?region=us" },
-    { id: "1153763472", title: "Indoor Navigation", thumbnail: "https://i.vimeocdn.com/video/2105839861-dd3d695869f375ff2594e607bfbd5c0f0f9858818d5623ea60c1f04c71ba9bda-d_640?region=us" },
-    { id: "1153763159", title: "Healthcare", thumbnail: "https://i.vimeocdn.com/video/2105839519-9df9b78a160b97fcd5a65375d192d39a9831e0caba841d52fd6f1cd40fb84d8f-d_640?region=us" },
-    { id: "1153762836", title: "Events and Festivals", thumbnail: "https://i.vimeocdn.com/video/2105839021-3887f94b3227251ed8b57c320bbdd6e194293701909390f3a9c15b609e0d6336-d_640?region=us" },
-    { id: "1153762480", title: "Cybersecurity", thumbnail: "https://i.vimeocdn.com/video/2105838579-4c5e71da9342b1b1c17f56646eec04ab4039d59bdbb879812ae26801f173704c-d_640?region=us" },
-    { id: "1153761741", title: "Homeless Kiosks Combined", thumbnail: "https://i.vimeocdn.com/video/2105837587-a22a2b7030b8f6b1a5edc6cfa5a7bc6ddb5023fbf2589521d4ca6ca85d533278-d_640?region=us" },
-    { id: "1153761078", title: "Cities and Counties", thumbnail: "https://i.vimeocdn.com/video/2105836651-a15983c4c61296154db174b66b8133acedfbe34fa9e69e66c5ecd8e09bea135a-d_640?region=us" },
+    {
+        id: "airport-and-marine-port",
+        title: "Airport and Marine Port",
+        url: "https://media-delonti.realhalal.co.uk/videos/airport-and-marine-port-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105840279-11bc80efe1def8c2724568b86ff50bcbf6257d81eab9fd5d785ec2449361b1b9-d_640?region=us",
+    },
+    {
+        id: "cities-and-counties",
+        title: "Cities and Counties",
+        url: "https://media-delonti.realhalal.co.uk/videos/cities-and-counties-rfid-demo-v4.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105836651-a15983c4c61296154db174b66b8133acedfbe34fa9e69e66c5ecd8e09bea135a-d_640?region=us",
+    },
+    {
+        id: "cybersecurity",
+        title: "Cybersecurity",
+        url: "https://media-delonti.realhalal.co.uk/videos/cybersecurity-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105838579-4c5e71da9342b1b1c17f56646eec04ab4039d59bdbb879812ae26801f173704c-d_640?region=us",
+    },
+    {
+        id: "events-and-festivals",
+        title: "Events and Festivals",
+        url: "https://media-delonti.realhalal.co.uk/videos/events-and-festivals-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105839021-3887f94b3227251ed8b57c320bbdd6e194293701909390f3a9c15b609e0d6336-d_640?region=us",
+    },
+    {
+        id: "healthcare",
+        title: "Healthcare",
+        url: "https://media-delonti.realhalal.co.uk/videos/healthcare-v2-rfid-demo-v3.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105839519-9df9b78a160b97fcd5a65375d192d39a9831e0caba841d52fd6f1cd40fb84d8f-d_640?region=us",
+    },
+    {
+        id: "homeless-kiosks-combined",
+        title: "Homeless Kiosks Combined",
+        url: "https://media-delonti.realhalal.co.uk/videos/homeless-kiosks-combined-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105837587-a22a2b7030b8f6b1a5edc6cfa5a7bc6ddb5023fbf2589521d4ca6ca85d533278-d_640?region=us",
+    },
+    {
+        id: "indoor-navigation",
+        title: "Indoor Navigation",
+        url: "https://media-delonti.realhalal.co.uk/videos/indoor-navigation-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105839861-dd3d695869f375ff2594e607bfbd5c0f0f9858818d5623ea60c1f04c71ba9bda-d_640?region=us",
+    },
+    {
+        id: "resource-augmentation",
+        title: "Resource Augmentation",
+        url: "https://media-delonti.realhalal.co.uk/videos/resource-augmentation-rfid-demo-v3.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105840727-ebb14a9ea32d889d13ba0a31e803ca99c3acd96b35264852ad543257bc85600a-d_640?region=us",
+    },
+    {
+        id: "schools-and-universities",
+        title: "Schools and Universities",
+        url: "https://media-delonti.realhalal.co.uk/videos/schools-and-universities-rfid-demo-v5.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105841165-9f06a569b023176aa8d65df6dc541ae7f3ef67786de895e41548745b0e3a4afe-d_640?region=us",
+    },
+    {
+        id: "transportation",
+        title: "Transportation",
+        url: "https://media-delonti.realhalal.co.uk/videos/transportation-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105841557-bc2bed09b942179c15f9f129eaef02e504ae4acf40332226f624097b0099add6-d_640?region=us",
+    },
+    {
+        id: "utilities-version-1",
+        title: "Utilities — Version 1",
+        url: "https://media-delonti.realhalal.co.uk/videos/utilities-version-1-rfid-demo-v3.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105842220-2de14a5c364b840c17195e6fa9b452f5fc88181a6a3b1fe76ecb839571127d6f-d_640?region=us",
+    },
+    {
+        id: "utilities-version-2",
+        title: "Utilities — Version 2",
+        url: "https://media-delonti.realhalal.co.uk/videos/utilities-version-2-rfid-demo-v2.mp4",
+        thumbnail: "https://i.vimeocdn.com/video/2105841877-c12bab9c65a9e841998751e47bb020bcd55f19bb45c09c2934e929d1a5e792b2-d_640?region=us",
+    },
 ];
 
 export default function VideoGallery() {
-    const [activeVideo, setActiveVideo] = useState<string | null>(null);
+    const [activeVideo, setActiveVideo] = useState<Video | null>(null);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setActiveVideo(null);
+            }
+        };
+
+        if (activeVideo) {
+            document.body.style.overflow = "hidden";
+            window.addEventListener("keydown", handleKeyDown);
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [activeVideo]);
 
     return (
         <section className="py-24 bg-[#FAFAFA] dark:bg-background-dark">
@@ -44,7 +125,7 @@ export default function VideoGallery() {
                         <div 
                             key={video.id}
                             className="group cursor-pointer flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300"
-                            onClick={() => setActiveVideo(video.id)}
+                            onClick={() => setActiveVideo(video)}
                         >
                             <div className="relative w-full aspect-video overflow-hidden bg-slate-900">
                                 <img 
@@ -69,38 +150,56 @@ export default function VideoGallery() {
                 </div>
             </div>
 
-            {/* Lightbox */}
+            {/* In-Site Video Lightbox Modal */}
             <AnimatePresence>
                 {activeVideo && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-10 bg-black/90 backdrop-blur-md"
                         onClick={() => setActiveVideo(null)}
                     >
-                        <button 
-                            className="absolute top-6 right-6 lg:top-10 lg:right-10 text-white/70 hover:text-white transition-colors p-2 bg-white/10 hover:bg-white/20 rounded-full"
-                            onClick={() => setActiveVideo(null)}
-                        >
-                            <X className="w-8 h-8" />
-                        </button>
-                        
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                            className="relative w-full max-w-6xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black"
+                        <div 
+                            className="relative w-full max-w-5xl flex flex-col bg-slate-950 border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <iframe
-                                src={`https://player.vimeo.com/video/${activeVideo}?autoplay=1&title=0&byline=0&portrait=0`}
-                                className="absolute top-0 left-0 w-full h-full border-0"
-                                allow="autoplay; fullscreen; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                        </motion.div>
+                            {/* Modal Header */}
+                            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-slate-900/80">
+                                <h3 className="text-sm md:text-base font-bold text-white tracking-wide uppercase truncate pr-4">
+                                    {activeVideo.title}
+                                </h3>
+                                <button 
+                                    type="button"
+                                    className="text-white/70 hover:text-white transition-colors p-2 bg-white/10 hover:bg-white/20 rounded-full"
+                                    onClick={() => setActiveVideo(null)}
+                                    aria-label="Close video modal"
+                                >
+                                    <X className="w-5 h-5 md:w-6 md:h-6" />
+                                </button>
+                            </div>
+
+                            {/* Native Video Player */}
+                            <motion.div
+                                initial={{ scale: 0.95, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.95, opacity: 0 }}
+                                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                                className="relative w-full aspect-video bg-black flex items-center justify-center"
+                            >
+                                <video
+                                    key={activeVideo.url}
+                                    src={activeVideo.url}
+                                    poster={activeVideo.thumbnail}
+                                    controls
+                                    autoPlay
+                                    playsInline
+                                    className="w-full h-full object-contain"
+                                >
+                                    Your browser does not support the video tag.
+                                </video>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
