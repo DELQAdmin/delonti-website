@@ -42,7 +42,7 @@ const SLIDES = [
     subtext: "Real-Time Visibility for Equipment, Students, and Safety",
     description: "Delonti - Smart Campus Infrastructure Platform",
     cta: "View Solutions",
-    link: "/solutions"
+    link: "/industries/education"
   },
   {
     video: "/videos/healthcare-animation.webm",
@@ -61,7 +61,7 @@ const SLIDES = [
     subtext: "Real-Time Visibility for Equipment and Patient Flow",
     description: "Delonti - Smart Healthcare Infrastructure Platform",
     cta: "Learn More",
-    link: "/solutions"
+    link: "/industries/healthcare"
   },
   {
     video: "/videos/manufacturing-animation.webm",
@@ -80,7 +80,7 @@ const SLIDES = [
     subtext: "Track Assets, Production, and Workflow in Real Time",
     description: "Delonti - RFID + AI for Smart Manufacturing Infrastructure",
     cta: "View Systems",
-    link: "/solutions"
+    link: "/industries/manufacturing"
   },
   {
     video: "/videos/retail-animation.webm",
@@ -99,7 +99,7 @@ const SLIDES = [
     subtext: "Track Inventory, Movement, and Fulfillment in Real Time",
     description: "Delonti - RFID + AI for Intelligent Supply Chains",
     cta: "View Solutions",
-    link: "/solutions"
+    link: "/industries/supply-chain"
   },
   {
     video: "/videos/law-enforcement-animation.webm",
@@ -118,7 +118,7 @@ const SLIDES = [
     subtext: "Track Assets, Personnel, and Response in Real Time",
     description: "Delonti - RFID + AI for Public Safety Infrastructure",
     cta: "Explore Solutions",
-    link: "/solutions"
+    link: "/industries/public-safety"
   }
 ];
 
