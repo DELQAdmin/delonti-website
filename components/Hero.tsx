@@ -23,7 +23,7 @@ const SLIDES = [
     subtext: "Powering Asset Tracking and Smart Homeless Service Kiosks",
     description: "Delonti - RFID + AI Intelligence Platform",
     cta: "Explore Solutions",
-    link: "/government"
+    link: "/industries/government"
   },
   {
     video: "/videos/education-animation.webm",
