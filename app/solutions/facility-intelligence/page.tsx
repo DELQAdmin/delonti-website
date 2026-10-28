@@ -45,7 +45,7 @@ export default function FacilityIntelligenceSolutionPage() {
     {
       title: "Manufacturing Plant Intelligence",
       img: "/images/public-safety/public_safety_case_facility.png",
-      href: "/resources/case-studies/manufacturing-tools-tracking",
+      href: "/resources/case-studies/facility-monitoring-public-safety",
       overview: "Manufacturing facilities require visibility into production environments, facility operations, environmental conditions, utilities, and equipment performance. Delonti provides real-time facility intelligence to improve productivity, sustainability, and operational efficiency.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     }

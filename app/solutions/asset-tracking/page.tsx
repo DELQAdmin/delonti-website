@@ -39,14 +39,14 @@ export default function AssetTrackingSolutionPage() {
     {
       title: "Manufacturing Tools Tracking",
       img: "/images/government/gov_fleet_tech_1778636024858.png",
-      href: "/resources/case-studies/manufacturing-tools-tracking",
+      href: "/industries/manufacturing",
       overview: "Manufacturing operations rely on specialized tools, molds, dies, and equipment to maintain production schedules. Missing or unavailable tools can create costly delays. Delonti provides real-time visibility into production assets and tools throughout the manufacturing environment.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     },
     {
       title: "Warehouse Asset Tracking",
       img: "/images/supply-chain/supply_chain_case_warehouse.png",
-      href: "/resources/case-studies/warehouse-asset-management",
+      href: "/resources/case-studies/warehouse-inventory-tracking",
       overview: "Warehouses and distribution centers manage large volumes of assets that support inventory movement, fulfillment, and logistics operations. Delonti provides real-time visibility into warehouse assets and operational equipment.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     }

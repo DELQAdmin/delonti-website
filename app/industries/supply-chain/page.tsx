@@ -36,11 +36,11 @@ export default function SupplyChainIndustryPage() {
   const gap = 24;
 
   const useCases = [
-    { title: "Warehouse Asset Management", img: IMAGES.case_warehouse, href: "/resources/case-studies/warehouse-asset-management" },
-    { title: "Real-Time Distribution Center Inventory", img: IMAGES.case_distribution, href: "/resources/case-studies/real-time-distribution-center-inventory" },
-    { title: "Omnichannel Retail Fulfillment", img: IMAGES.case_retail, href: "/resources/case-studies/omnichannel-retail-fulfillment" },
-    { title: "Carrier Logistics Visibility", img: IMAGES.case_logistics, href: "/resources/case-studies/carrier-logistics-visibility" },
-    { title: "Reverse Logistics Optimization", img: IMAGES.case_reverse, href: "/resources/case-studies/reverse-logistics-optimization" }
+    { title: "Warehouse Asset Management", img: IMAGES.case_warehouse, href: "/resources/case-studies/warehouse-inventory-tracking" },
+    { title: "Real-Time Distribution Center Inventory", img: IMAGES.case_distribution, href: "/resources/case-studies/distribution-monitoring" },
+    { title: "Omnichannel Retail Fulfillment", img: IMAGES.case_retail, href: "/resources/case-studies/retail-inventory-management" },
+    { title: "Carrier Logistics Visibility", img: IMAGES.case_logistics, href: "/resources/case-studies/logistics-optimization" },
+    { title: "Reverse Logistics Optimization", img: IMAGES.case_reverse, href: "/resources/case-studies/reverse-logistics-returns-management" }
   ];
 
   useEffect(() => {

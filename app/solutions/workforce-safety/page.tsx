@@ -24,14 +24,14 @@ export default function WorkforceSafetySolutionPage() {
     {
       title: "Manufacturing Workforce Tracking",
       img: "/images/public-safety/public_safety_case_safety.png",
-      href: "/resources/case-studies/manufacturing-workforce-tracking",
+      href: "/resources/case-studies/officer-first-responder-safety-monitoring",
       overview: "Manufacturing facilities often operate in complex environments where worker visibility, restricted area monitoring, and safety compliance are critical to maintaining safe and productive operations. Delonti provides real-time workforce visibility to improve safety and operational awareness.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     },
     {
       title: "Construction Safety Management",
       img: "/images/public-safety/public_safety_case_equipment.png",
-      href: "/resources/case-studies/construction-safety-management",
+      href: "/resources/case-studies/equipment-management-public-safety",
       overview: "Construction projects involve constantly changing work environments, multiple contractors, and numerous safety risks that require proactive monitoring and management. Delonti enables construction organizations to monitor personnel and improve job-site safety in real time.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     },

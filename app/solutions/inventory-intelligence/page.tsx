@@ -24,14 +24,14 @@ export default function InventoryIntelligenceSolutionPage() {
     {
       title: "Warehouse Inventory Management",
       img: "/images/supply-chain/supply_chain_case_distribution.png",
-      href: "/resources/case-studies/real-time-distribution-center-inventory",
+      href: "/resources/case-studies/warehouse-inventory-tracking",
       overview: "Warehouses manage thousands of products moving through receiving, storage, picking, packing, and shipping operations. Lack of inventory visibility can lead to fulfillment delays, inventory inaccuracies, and operational inefficiencies. Delonti's Inventory Intelligence Platform provides real-time visibility into inventory across warehouse operations.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     },
     {
       title: "Retail Stock Tracking",
       img: "/images/supply-chain/supply_chain_case_retail.png",
-      href: "/resources/case-studies/omnichannel-retail-fulfillment",
+      href: "/resources/case-studies/retail-inventory-management",
       overview: "Retailers must maintain accurate inventory levels across stores, stockrooms, distribution centers, and online channels to support customer demand and omnichannel fulfillment. Delonti enables retailers to gain complete inventory visibility from shelf to warehouse.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     },
@@ -45,7 +45,7 @@ export default function InventoryIntelligenceSolutionPage() {
     {
       title: "Manufacturing Materials Management",
       img: "/images/supply-chain/supply_chain_case_reverse.png",
-      href: "/resources/case-studies/reverse-logistics-optimization",
+      href: "/resources/case-studies/reverse-logistics-returns-management",
       overview: "Manufacturers require real-time visibility into raw materials, work-in-progress inventory, and finished goods to support production schedules and reduce operational risk. Delonti provides complete inventory intelligence across the manufacturing lifecycle.",
       benefits: ["Visibility", "Utilization", "Efficiency", "Compliance"]
     }

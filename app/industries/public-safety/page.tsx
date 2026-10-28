@@ -36,11 +36,11 @@ export default function PublicSafetyIndustryPage() {
   const gap = 24;
 
   const useCases = [
-    { title: "Law Enforcement Fleet & Asset Management", img: IMAGES.case_law, href: "/resources/case-studies/law-enforcement-fleet-asset-management" },
-    { title: "Emergency Medical Services Readiness", img: IMAGES.case_emergency, href: "/resources/case-studies/emergency-medical-services-readiness" },
-    { title: "Fire & Rescue Equipment Tracking", img: IMAGES.case_equipment, href: "/resources/case-studies/fire-rescue-equipment-tracking" },
-    { title: "Public Facility Security Monitoring", img: IMAGES.case_facility, href: "/resources/case-studies/public-facility-security-monitoring" },
-    { title: "Community Safety Monitoring", img: IMAGES.case_safety, href: "/resources/case-studies/community-safety-monitoring" }
+    { title: "Law Enforcement Fleet & Asset Management", img: IMAGES.case_law, href: "/resources/case-studies/law-enforcement-asset-tracking" },
+    { title: "Emergency Medical Services Readiness", img: IMAGES.case_emergency, href: "/resources/case-studies/emergency-response-coordination" },
+    { title: "Fire & Rescue Equipment Tracking", img: IMAGES.case_equipment, href: "/resources/case-studies/equipment-management-public-safety" },
+    { title: "Public Facility Security Monitoring", img: IMAGES.case_facility, href: "/resources/case-studies/facility-monitoring-public-safety" },
+    { title: "Community Safety Monitoring", img: IMAGES.case_safety, href: "/resources/case-studies/officer-first-responder-safety-monitoring" }
   ];
 
   useEffect(() => {

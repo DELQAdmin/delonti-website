@@ -33,10 +33,10 @@ export default function ManufacturingIndustryPage() {
   const gap = 24;
 
   const useCases = [
-    { title: "Production Line Monitoring", img: IMAGES.case_production, href: "#" },
-    { title: "Asset Tracking", img: IMAGES.case_asset, href: "#" },
-    { title: "Inventory Management", img: IMAGES.case_inventory, href: "#" },
-    { title: "Workflow Optimization", img: IMAGES.case_workflow, href: "#" }
+    { title: "Production Line Monitoring", img: IMAGES.case_production, href: "/solutions/facility-intelligence" },
+    { title: "Asset Tracking", img: IMAGES.case_asset, href: "/solutions/asset-tracking" },
+    { title: "Inventory Management", img: IMAGES.case_inventory, href: "/solutions/inventory-intelligence" },
+    { title: "Workflow Optimization", img: IMAGES.case_workflow, href: "/solutions/workforce-safety" }
   ];
 
   useEffect(() => {
@@ -381,7 +381,7 @@ export default function ManufacturingIndustryPage() {
             >
               {useCases.map((study, idx) => (
                 <div key={idx} className="shrink-0" style={{ width: `${cardWidth}px` }}>
-                  <div className="group flex flex-col h-full bg-white dark:bg-background-dark p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow">
+                  <Link href={study.href} className="group cursor-pointer flex flex-col h-full bg-white dark:bg-background-dark p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow">
                     <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 mb-6 relative">
                       <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style={{ backgroundImage: `url('${study.img}')` }} />
                     </div>
@@ -391,7 +391,7 @@ export default function ManufacturingIndustryPage() {
                     <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#111111] dark:text-white">
                       Delonti Solution <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </motion.div>
