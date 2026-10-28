@@ -42,7 +42,7 @@ const NEWS_ITEMS: NewsItem[] = [
         description: "A major state administration has selected Delonti to deploy RFID asset tracking and automated audit reporting across multiple agency headquarters, reducing inventory count cycles by over 60%.",
         readTime: "3 min read",
         tag: "Public Sector",
-        image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=2070",
+        image: "/images/government/gov_case_rfid_1778638339756.png",
         link: "/resources/case-studies/rfid-asset-tracking-government"
     },
     {
